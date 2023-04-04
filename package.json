@@ -3,7 +3,7 @@
   "homepage": "https://josejpg.github.io/freecodecamp-random-quote-machine/",
   "version": "0.1.0",
   "private": false,
-  "license": "GNU General Public License v2.0",
+  "license": "GPL-2.0-or-later",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
