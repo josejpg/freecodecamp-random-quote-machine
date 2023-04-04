@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Presentational.scss';
+import { connect, Provider } from "react-redux";
+import { mapDispatchToProps, mapStateToProps } from "./connections/quotes.connection";
+import { Presentational } from "./Presentational";
+import { store } from "./stores/quotes.store";
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <Container/>
+            </Provider>
+        );
+    }
+};
 
 export default App;
